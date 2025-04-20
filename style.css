@@ -1,64 +1,50 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  height: 100vh;
-  background: linear-gradient(135deg, #6dd5ed, #f0e68c);
+  background: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-  font-size: 2rem;
-  font-family: 'Poppins', sans-serif; /* Optional: Adds modern font */
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
 }
 
-.caculator {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+.input-group, .options, .buttons {
+  margin: 1rem 0;
 }
 
-#display {
+input[type="text"] {
   width: 100%;
-  height: 40px;
-  font-size: 2rem;
-  text-align: right;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  background: #f0f0ec;
-  margin-bottom: 10px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
 }
 
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  justify-content: center;
-}
-button {
-  width: 100%;
-  height: 50px;
-  font-size: 1.5rem;
+button{
+  background: #007bff;
+  color: white;
   border: none;
-  border-radius: 10px;
-  background: #6dd5ed;
-  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
- button:hover {
-  background: #5bb8e4;
- }
+button:hover {
+  background: #0056b3;
+}
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+} 

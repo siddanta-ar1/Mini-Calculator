@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Calculator</title>
+    <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-   
 </head>
-
 <body>
-    <div class="calculator">
-        <h1>Mini Calculator</h1>
-        <input type="text" id="display" disabled>
+
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="input-group">
+            <label>
+                Password Length: <span id="lengthValue">12</span>
+            </label>
+            <input type="range" id="length" min="4" max="32" value="12">
+
+        </div>
+        <div class="options">
+            <label><input type="checkbox" id="uppercase" checked> Include Uppercase Letters</label>
+            <label><input type="checkbox" id="lowercase" checked> Include Lowercase Letters</label>
+            <label><input type="checkbox" id="numbers" checked> Include Numbers</label>
+            <label><input type="checkbox" id="symbols"> Include Symbols</label>
+
+        </div>
+        <input type="text" id="password" readonly placeholder="Your password will appear here ">
         <div class="buttons">
-            <button onclick="clearDisplay()">C</button>
-            <button onclick="appendToDisplay('7')">7</button>
-            <button onclick="appendToDisplay('8')">8</button>
-            <button onclick="appendToDisplay('9')">9</button>
-            <button onclick="appendToDisplay('/')">/</button>
-            <button onclick="appendToDisplay('4')">4</button>
-            <button onclick="appendToDisplay('5')">5</button>
-            <button onclick="appendToDisplay('6')">6</button>
-            <button onclick="appendToDisplay('*')">*</button>
-            <button onclick="appendToDisplay('1')">1</button>
-            <button onclick="appendToDisplay('2')">2</button>
-            <button onclick="appendToDisplay('3')">3</button>
-            <button onclick="appendToDisplay('-')">-</button>
-            <button onclick="appendToDisplay('+')">+</button>
-            <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="calculate()">=</button>
+            <button id="generate">Generate Password</button>
+            <button id="copy">Copy to Clipboard</button>
+
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
